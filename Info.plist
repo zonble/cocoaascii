@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string></string>
+	<string>ASCIIConverter</string>
 	<key>CFBundleIdentifier</key>
 	<string>net.zonble.${PRODUCT_NAME:identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -20,11 +20,11 @@
 	<string>ZNBL</string>
 	<key>CFBundleVersion</key>
 	<string>0.1</string>
+	<key>LSHasLocalizedDisplayName</key>
+	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>LSHasLocalizedDisplayName</key>
-	<true/>
 </dict>
 </plist>

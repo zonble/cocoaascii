@@ -20,6 +20,7 @@
 		D49616AE101791E300692806 /* MainController+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D49616AD101791E300692806 /* MainController+AppDelegate.m */; };
 		D49616CD1017959800692806 /* ASCIIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D49616CC1017959800692806 /* ASCIIImageView.m */; };
 		D496173910179E1E00692806 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D496173710179E1E00692806 /* Localizable.strings */; };
+		D49617551017A71500692806 /* ASCIIConverter.icns in Resources */ = {isa = PBXBuildFile; fileRef = D49617541017A71500692806 /* ASCIIConverter.icns */; };
 		D4EDDA0410170CEF003932C1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDA0310170CEF003932C1 /* MainController.m */; };
 		D4EDDA0710170D5F003932C1 /* NSImage+ASCII.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDA0610170D5F003932C1 /* NSImage+ASCII.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		D496173D10179E6C00692806 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D496174810179F4700692806 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D496174D1017A1D500692806 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D49617541017A71500692806 /* ASCIIConverter.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = ASCIIConverter.icns; path = Images/ASCIIConverter.icns; sourceTree = "<group>"; };
 		D4EDDA0210170CEF003932C1 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		D4EDDA0310170CEF003932C1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		D4EDDA0510170D5F003932C1 /* NSImage+ASCII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+ASCII.h"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D49617541017A71500692806 /* ASCIIConverter.icns */,
 				D496160A1017893E00692806 /* Images */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				D496173710179E1E00692806 /* Localizable.strings */,
@@ -224,6 +227,7 @@
 				D496161E1017895000692806 /* save.png in Resources */,
 				D496161F1017895000692806 /* copy.png in Resources */,
 				D496173910179E1E00692806 /* Localizable.strings in Resources */,
+				D49617551017A71500692806 /* ASCIIConverter.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
