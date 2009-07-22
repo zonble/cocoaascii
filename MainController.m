@@ -22,8 +22,15 @@
 
 - (void)awakeFromNib
 {
+	NSToolbar *toolbar = [[[NSToolbar alloc] initWithIdentifier:@"toolbar"] autorelease];
+	[toolbar setDelegate:self];
+	[toolbar setAutosavesConfiguration:YES];
+	[toolbar setAllowsUserCustomization:YES];
+	[[self window] setToolbar:toolbar];
+	[NSApp setDelegate:self];
+	
 	[[self window] center];
-	[[self window] setDelegate:self];
+//	[[self window] setDelegate:self];
 
 	NSInteger width = [[NSUserDefaults standardUserDefaults] integerForKey:kWidthPreference];
 	if (!width) {
@@ -149,6 +156,12 @@
 	[savePanel setAllowsOtherFileTypes:NO];
 	[savePanel beginSheetForDirectory:nil file:@"ascii.txt" modalForWindow:[self window] modalDelegate:self didEndSelector:@selector(savePanelDidEnd:returnCode:contextInfo:) contextInfo:NULL];	
 }
-
+- (IBAction)copy:(id)sender
+{
+	id responder = [[self window] firstResponder];
+	if ([responder respondsToSelector:@selector(copy:)]) {
+		[responder copy:sender];
+	}
+}
 	
 @end

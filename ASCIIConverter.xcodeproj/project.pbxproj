@@ -11,6 +11,13 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		D496161C1017895000692806 /* insert_image.png in Resources */ = {isa = PBXBuildFile; fileRef = D49616181017895000692806 /* insert_image.png */; };
+		D496161D1017895000692806 /* print.png in Resources */ = {isa = PBXBuildFile; fileRef = D49616191017895000692806 /* print.png */; };
+		D496161E1017895000692806 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = D496161A1017895000692806 /* save.png */; };
+		D496161F1017895000692806 /* copy.png in Resources */ = {isa = PBXBuildFile; fileRef = D496161B1017895000692806 /* copy.png */; };
+		D4961627101789A300692806 /* MainController+Toolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D4961626101789A300692806 /* MainController+Toolbar.m */; };
+		D496166410178CD500692806 /* MainController+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = D496166310178CD500692806 /* MainController+Validation.m */; };
+		D49616AE101791E300692806 /* MainController+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D49616AD101791E300692806 /* MainController+AppDelegate.m */; };
 		D4EDDA0410170CEF003932C1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDA0310170CEF003932C1 /* MainController.m */; };
 		D4EDDA0710170D5F003932C1 /* NSImage+ASCII.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDA0610170D5F003932C1 /* NSImage+ASCII.m */; };
 /* End PBXBuildFile section */
@@ -26,6 +33,16 @@
 		32CA4F630368D1EE00C91783 /* ASCIIConverter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCIIConverter_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ASCIIConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASCIIConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49616181017895000692806 /* insert_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = insert_image.png; path = Images/insert_image.png; sourceTree = "<group>"; };
+		D49616191017895000692806 /* print.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = print.png; path = Images/print.png; sourceTree = "<group>"; };
+		D496161A1017895000692806 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = save.png; path = Images/save.png; sourceTree = "<group>"; };
+		D496161B1017895000692806 /* copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = copy.png; path = Images/copy.png; sourceTree = "<group>"; };
+		D4961625101789A300692806 /* MainController+Toolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MainController+Toolbar.h"; sourceTree = "<group>"; };
+		D4961626101789A300692806 /* MainController+Toolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MainController+Toolbar.m"; sourceTree = "<group>"; };
+		D496166210178CD500692806 /* MainController+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MainController+Validation.h"; sourceTree = "<group>"; };
+		D496166310178CD500692806 /* MainController+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MainController+Validation.m"; sourceTree = "<group>"; };
+		D49616AC101791E300692806 /* MainController+AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MainController+AppDelegate.h"; sourceTree = "<group>"; };
+		D49616AD101791E300692806 /* MainController+AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MainController+AppDelegate.m"; sourceTree = "<group>"; };
 		D4EDDA0210170CEF003932C1 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		D4EDDA0310170CEF003932C1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		D4EDDA0510170D5F003932C1 /* NSImage+ASCII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+ASCII.h"; sourceTree = "<group>"; };
@@ -51,6 +68,12 @@
 				D4EDDA0610170D5F003932C1 /* NSImage+ASCII.m */,
 				D4EDDA0210170CEF003932C1 /* MainController.h */,
 				D4EDDA0310170CEF003932C1 /* MainController.m */,
+				D4961625101789A300692806 /* MainController+Toolbar.h */,
+				D4961626101789A300692806 /* MainController+Toolbar.m */,
+				D496166210178CD500692806 /* MainController+Validation.h */,
+				D496166310178CD500692806 /* MainController+Validation.m */,
+				D49616AC101791E300692806 /* MainController+AppDelegate.h */,
+				D49616AD101791E300692806 /* MainController+AppDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -105,6 +128,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D496160A1017893E00692806 /* Images */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -119,6 +143,17 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D496160A1017893E00692806 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D49616181017895000692806 /* insert_image.png */,
+				D49616191017895000692806 /* print.png */,
+				D496161A1017895000692806 /* save.png */,
+				D496161B1017895000692806 /* copy.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +201,10 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				D496161C1017895000692806 /* insert_image.png in Resources */,
+				D496161D1017895000692806 /* print.png in Resources */,
+				D496161E1017895000692806 /* save.png in Resources */,
+				D496161F1017895000692806 /* copy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +218,9 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				D4EDDA0410170CEF003932C1 /* MainController.m in Sources */,
 				D4EDDA0710170D5F003932C1 /* NSImage+ASCII.m in Sources */,
+				D4961627101789A300692806 /* MainController+Toolbar.m in Sources */,
+				D496166410178CD500692806 /* MainController+Validation.m in Sources */,
+				D49616AE101791E300692806 /* MainController+AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,5 +24,6 @@
 - (IBAction)loadImage:(id)sender;
 - (IBAction)save:(id)sender;
 - (IBAction)saveAs:(id)sender;
+- (IBAction)copy:(id)sender;
 
 @end
