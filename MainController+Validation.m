@@ -24,6 +24,9 @@
 		if ([responder respondsToSelector:@selector(copy:)])
 			return YES;		
 	}
+	else if (action == @selector(openZonbleBlogURL:)) {
+		return YES;
+	}
 	return NO;
 }
 

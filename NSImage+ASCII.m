@@ -3,7 +3,6 @@
 //  NSImageASCII
 //
 //  Created by zonble on 2009/07/22.
-//  Copyright 2009 Lithoglyph Inc.. All rights reserved.
 //
 
 #import "NSImage+ASCII.h"
@@ -54,11 +53,12 @@ NSString *stringForBrightness(CGFloat brightness)
 		return nil;
 	
 	NSMutableString *string = [NSMutableString string];
+	
 	NSImage *tempImage = [[NSImage alloc] initWithSize:NSMakeSize(width, height)];
 	[tempImage lockFocus];
-	[self drawInRect:NSMakeRect(0, 0, [tempImage size].width, [tempImage size].height) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
-	
+	[self drawInRect:NSMakeRect(0, 0, [tempImage size].width, [tempImage size].height) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];	
 	[tempImage unlockFocus];
+
 	NSBitmapImageRep *bitmapImage = [[NSBitmapImageRep alloc] initWithData:[tempImage TIFFRepresentation]];
 	
 	for (int i = 0; i < [tempImage size].height; i++) {

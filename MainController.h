@@ -25,5 +25,6 @@
 - (IBAction)save:(id)sender;
 - (IBAction)saveAs:(id)sender;
 - (IBAction)copy:(id)sender;
+- (IBAction)openZonbleBlogURL:(id)sender;
 
 @end

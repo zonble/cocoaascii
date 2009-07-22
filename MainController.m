@@ -20,6 +20,10 @@
 	[super dealloc];
 }
 
+- (NSFont *)_defaultFont
+{
+	return [NSFont fontWithName:@"Monaco" size:10.0];
+}
 
 - (void)awakeFromNib
 {
@@ -51,7 +55,7 @@
 	
 	[_widthField setIntValue:width];
 	[_heightField setIntValue:height];
-	[[_textView textStorage] setFont:[NSFont fontWithName:@"Monaco" size:12.0]];
+	[[_textView textStorage] setFont:[self _defaultFont]];
 }
 
 #pragma mark -
@@ -63,7 +67,7 @@
 	NSImage *image = [_imageView image];
 	NSString *asciiArt = [image asciiArtWithWidth:width height:height];
 	[[[_textView textStorage] mutableString] setString:asciiArt];
-	[[_textView textStorage] setFont:[NSFont fontWithName:@"Monaco" size:12.0]];
+	[[_textView textStorage] setFont:[self _defaultFont]];
 }
 - (IBAction)changeWidth:(id)sender
 {
@@ -73,6 +77,9 @@
 	}
 	if (width) {
 		[[NSUserDefaults standardUserDefaults] setInteger:width forKey:kWidthPreference];
+		if ([_imageView image]) {
+			[self convert:nil];
+		}		
 	}
 }
 - (IBAction)changeHeight:(id)sender
@@ -83,6 +90,9 @@
 	}	
 	if (height) {
 		[[NSUserDefaults standardUserDefaults] setInteger:height forKey:kHeightPreference];
+		if ([_imageView image]) {
+			[self convert:nil];
+		}
 	}
 }
 - (void)openPanelDidEnd:(NSOpenPanel *)panel returnCode:(NSInteger)returnCode contextInfo:(void  *)contextInfo
@@ -162,6 +172,11 @@
 	if ([responder respondsToSelector:@selector(copy:)]) {
 		[responder copy:sender];
 	}
+}
+- (IBAction)openZonbleBlogURL:(id)sender
+{
+	NSURL *URL = [NSURL URLWithString:@"http://zonble.net/"];
+	[[NSWorkspace sharedWorkspace] openURL:URL];
 }
 
 #pragma mark -
