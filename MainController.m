@@ -7,6 +7,7 @@
 
 #import "MainController.h"
 #import "NSImage+ASCII.h"
+#import "ASCIIImageView.h"
 
 #define kWidthPreference @"kWidthPreference"
 #define kHeightPreference @"kHeightPreference"
@@ -94,7 +95,6 @@
 		return;
 	}
 	[_imageView setImage:image];
-	[self convert:nil];
 }
 - (IBAction)loadImage:(id)sender
 {
@@ -163,5 +163,17 @@
 		[responder copy:sender];
 	}
 }
-	
+
+#pragma mark -
+
+- (void)imageViewImageDidChange:(ASCIIImageView *)imageView
+{
+	[self convert:nil];
+}
+- (void)imageViewImageDidDoubleClick:(ASCIIImageView *)imageView
+{
+	[self loadImage:nil];
+}
+
+
 @end

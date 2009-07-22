@@ -18,6 +18,7 @@
 		D4961627101789A300692806 /* MainController+Toolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D4961626101789A300692806 /* MainController+Toolbar.m */; };
 		D496166410178CD500692806 /* MainController+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = D496166310178CD500692806 /* MainController+Validation.m */; };
 		D49616AE101791E300692806 /* MainController+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D49616AD101791E300692806 /* MainController+AppDelegate.m */; };
+		D49616CD1017959800692806 /* ASCIIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D49616CC1017959800692806 /* ASCIIImageView.m */; };
 		D4EDDA0410170CEF003932C1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDA0310170CEF003932C1 /* MainController.m */; };
 		D4EDDA0710170D5F003932C1 /* NSImage+ASCII.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDA0610170D5F003932C1 /* NSImage+ASCII.m */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,8 @@
 		D496166310178CD500692806 /* MainController+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MainController+Validation.m"; sourceTree = "<group>"; };
 		D49616AC101791E300692806 /* MainController+AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MainController+AppDelegate.h"; sourceTree = "<group>"; };
 		D49616AD101791E300692806 /* MainController+AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MainController+AppDelegate.m"; sourceTree = "<group>"; };
+		D49616CB1017959800692806 /* ASCIIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCIIImageView.h; sourceTree = "<group>"; };
+		D49616CC1017959800692806 /* ASCIIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASCIIImageView.m; sourceTree = "<group>"; };
 		D4EDDA0210170CEF003932C1 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		D4EDDA0310170CEF003932C1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		D4EDDA0510170D5F003932C1 /* NSImage+ASCII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+ASCII.h"; sourceTree = "<group>"; };
@@ -74,6 +77,8 @@
 				D496166310178CD500692806 /* MainController+Validation.m */,
 				D49616AC101791E300692806 /* MainController+AppDelegate.h */,
 				D49616AD101791E300692806 /* MainController+AppDelegate.m */,
+				D49616CB1017959800692806 /* ASCIIImageView.h */,
+				D49616CC1017959800692806 /* ASCIIImageView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				D4961627101789A300692806 /* MainController+Toolbar.m in Sources */,
 				D496166410178CD500692806 /* MainController+Validation.m in Sources */,
 				D49616AE101791E300692806 /* MainController+AppDelegate.m in Sources */,
+				D49616CD1017959800692806 /* ASCIIImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
