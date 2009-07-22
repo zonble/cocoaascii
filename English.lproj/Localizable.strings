@@ -1,0 +1,23 @@
+﻿/* The message in the save panel. */
+"Failed to save the file!" = "Failed to save the file!";
+
+/* No comment provided by engineer. */
+"Load..." = "Load...";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* The message in the save panel. */
+"Please try again." = "Please try again.";
+
+/* No comment provided by engineer. */
+"Save" = "Save";
+
+/* No comment provided by engineer. */
+"Save the converted text to a plain text file:" = "Save the converted text to a plain text file:";
+
+/* No comment provided by engineer. */
+"The image file to convert:" = "The image file to convert:";
+
+"Load Image" = "Load Image";
+"Copy" = "Copy";

@@ -19,6 +19,7 @@
 		D496166410178CD500692806 /* MainController+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = D496166310178CD500692806 /* MainController+Validation.m */; };
 		D49616AE101791E300692806 /* MainController+AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D49616AD101791E300692806 /* MainController+AppDelegate.m */; };
 		D49616CD1017959800692806 /* ASCIIImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D49616CC1017959800692806 /* ASCIIImageView.m */; };
+		D496173910179E1E00692806 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D496173710179E1E00692806 /* Localizable.strings */; };
 		D4EDDA0410170CEF003932C1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDA0310170CEF003932C1 /* MainController.m */; };
 		D4EDDA0710170D5F003932C1 /* NSImage+ASCII.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EDDA0610170D5F003932C1 /* NSImage+ASCII.m */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,10 @@
 		D49616AD101791E300692806 /* MainController+AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MainController+AppDelegate.m"; sourceTree = "<group>"; };
 		D49616CB1017959800692806 /* ASCIIImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASCIIImageView.h; sourceTree = "<group>"; };
 		D49616CC1017959800692806 /* ASCIIImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASCIIImageView.m; sourceTree = "<group>"; };
+		D496173810179E1E00692806 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D496173D10179E6C00692806 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D496174810179F4700692806 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = zh_TW; path = zh_TW.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D496174D1017A1D500692806 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D4EDDA0210170CEF003932C1 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		D4EDDA0310170CEF003932C1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		D4EDDA0510170D5F003932C1 /* NSImage+ASCII.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+ASCII.h"; sourceTree = "<group>"; };
@@ -135,6 +140,7 @@
 			children = (
 				D496160A1017893E00692806 /* Images */,
 				8D1107310486CEB800E47090 /* Info.plist */,
+				D496173710179E1E00692806 /* Localizable.strings */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 			);
@@ -190,6 +196,13 @@
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ASCIIConverter" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				zh_TW,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* ASCIIConverter */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,6 +223,7 @@
 				D496161D1017895000692806 /* print.png in Resources */,
 				D496161E1017895000692806 /* save.png in Resources */,
 				D496161F1017895000692806 /* copy.png in Resources */,
+				D496173910179E1E00692806 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +251,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				089C165DFE840E0CC02AAC07 /* English */,
+				D496174D1017A1D500692806 /* zh_TW */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -245,8 +260,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				1DDD58150DA1D0A300B32029 /* English */,
+				D496174810179F4700692806 /* zh_TW */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		D496173710179E1E00692806 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D496173810179E1E00692806 /* English */,
+				D496173D10179E6C00692806 /* zh_TW */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -7,7 +7,7 @@
 
 #import "MainController+Toolbar.h"
 
-static NSString *loadToolbarIdentifier = @"Load";
+static NSString *loadToolbarIdentifier = @"Load Image";
 static NSString *saveToolbarIdentifier = @"Save";
 static NSString *copyToolbarIdentifier = @"Copy";
 

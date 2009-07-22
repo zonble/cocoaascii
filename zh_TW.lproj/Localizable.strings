@@ -1,0 +1,23 @@
+﻿/* The message in the save panel. */
+"Failed to save the file!" = "檔案儲存失敗！";
+
+/* No comment provided by engineer. */
+"Load..." = "載入….";
+
+/* No comment provided by engineer. */
+"OK" = "好";
+
+/* The message in the save panel. */
+"Please try again." = "請重試看看";
+
+/* No comment provided by engineer. */
+"Save" = "儲存";
+
+/* No comment provided by engineer. */
+"Save the converted text to a plain text file:" = "儲存為純文字檔案";
+
+/* No comment provided by engineer. */
+"The image file to convert:" = "要轉換的影像檔案";
+
+"Load Image" = "載入影像";
+"Copy" = "拷貝";

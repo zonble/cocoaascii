@@ -1,0 +1,5 @@
+﻿/* Localized versions of Info.plist keys */
+
+CFBundleName = "ASCII Art 產生器";
+CFBundleDisplayName = "ASCII Art 產生器";
+NSHumanReadableCopyright = "Copyright © 2009 Weizhong Yang.\n版權所有.\n http://zonble.net";
