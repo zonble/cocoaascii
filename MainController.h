@@ -14,11 +14,15 @@
 	IBOutlet NSTextField *_widthField;
 	IBOutlet NSTextField *_heightField;
 	IBOutlet NSImageView *_imageView;
+	
+	NSString *_currentFilePath;
 }
 
-- (IBAction)generate:(id)sender;
+- (IBAction)convert:(id)sender;
 - (IBAction)changeWidth:(id)sender;
 - (IBAction)changeHeight:(id)sender;
+- (IBAction)loadImage:(id)sender;
 - (IBAction)save:(id)sender;
+- (IBAction)saveAs:(id)sender;
 
 @end
