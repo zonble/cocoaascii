@@ -2,6 +2,8 @@
 
 2009 © Weizhong Yang. All Right Reserved.
 
+![Screenshot](http://cloud.github.com/downloads/zonble/cocoaascii/screenshot.jpg)
+
 顧名思義，這是一套將各種圖片檔案，轉換成以英數字元構成的 ASCII Art 的小程式。
 
 操作介面也十分簡單，只要將影像檔案拖到主視窗當中，就會自動幫你轉換成對應的文字；接著，您便可以用複製貼上的方式，使用轉換出來的結果。
@@ -18,5 +20,5 @@
 
 編譯方式非常簡單：
 
-1. 使用 Xcode 開啟 ASCIIConverter.xcodeproj
+1. 使用 Xcode 開啟 ```ASCIIConverter.xcodeproj```
 2. 在工具列上按下 Build 或 Build and Go 即可。

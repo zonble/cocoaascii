@@ -1,5 +1,7 @@
 # ASCII Converter
 
+![Screenshot](http://cloud.github.com/downloads/zonble/cocoaascii/screenshot.jpg)
+
 ASCII Converter is merely a simple tool which helps you to convert an image file into an ASCII artwork.
 
 What you need to do is launch the application, darg your image file to the main window, and you are done. Then you get the converted result, you can copy and paste the text and do whatever you want.
