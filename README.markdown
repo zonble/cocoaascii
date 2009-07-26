@@ -21,3 +21,7 @@ It is quite easy to build the application:
 1. Open ``ASCIIConverter.xcodeproj`` with Xcode.
 2. Click on the "Build" or "Build and Go" button on the toolbar.
 3. Done!
+
+## Feedback/Contact
+
+Any suggestion or advice is welcome. Please write to zonble@lithoglyph.com

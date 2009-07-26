@@ -22,3 +22,7 @@
 
 1. 使用 Xcode 開啟 ``ASCIIConverter.xcodeproj``
 2. 在工具列上按下 Build 或 Build and Go 即可。
+
+## 意見反應
+
+如您有任何建議，歡迎來信至 zonble@lithoglyph.com
