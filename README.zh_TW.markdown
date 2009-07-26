@@ -15,3 +15,8 @@
 ## 自行編譯
 
 如果您想要自行編譯這個程式，您需要 Mac OS X 10.5 以上作業系統，並安裝 Xcode 3.0 以上版本。Xcode 開發工具可以在蘋果開發者（Apple Developer Connection）網站上取得。
+
+編譯方式非常簡單：
+
+1. 使用 Xcode 開啟 ASCIIConverter.xcodeproj
+2. 在工具列上按下 Build 或 Build and Go 即可。
