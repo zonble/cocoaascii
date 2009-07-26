@@ -18,6 +18,6 @@ If you want to build the application by your self, Mac OS X 10.5 Leopard and Xoc
 
 It is quite easy to build the application:
 
-1. Open ```ASCIIConverter.xcodeproj``` with Xcode.
+1. Open ``ASCIIConverter.xcodeproj`` with Xcode.
 2. Click on the "Build" or "Build and Go" button on the toolbar.
 3. Done!

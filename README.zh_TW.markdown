@@ -20,5 +20,5 @@
 
 編譯方式非常簡單：
 
-1. 使用 Xcode 開啟 ```ASCIIConverter.xcodeproj```
+1. 使用 Xcode 開啟 ``ASCIIConverter.xcodeproj``
 2. 在工具列上按下 Build 或 Build and Go 即可。
