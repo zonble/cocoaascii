@@ -47,22 +47,39 @@ NSString *stringForBrightness(CGFloat brightness)
 
 - (NSString *)asciiArtWithWidth:(NSInteger)width height:(NSInteger)height
 {
-	if (!width)
+	if (!width || !height) {
 		return nil;
-	if (!height)
-		return nil;
-	
-	NSMutableString *string = [NSMutableString string];
-	
-	NSImage *tempImage = [[NSImage alloc] initWithSize:NSMakeSize(width, height)];
-	[tempImage lockFocus];
-	[self drawInRect:NSMakeRect(0, 0, [tempImage size].width, [tempImage size].height) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];	
-	[tempImage unlockFocus];
+	}
 
-	NSBitmapImageRep *bitmapImage = [[NSBitmapImageRep alloc] initWithData:[tempImage TIFFRepresentation]];
+	NSMutableString *string = [NSMutableString string];
+
+    NSBitmapImageRep *bitmapImage = [[NSBitmapImageRep alloc]
+              initWithBitmapDataPlanes:NULL
+                            pixelsWide:width
+                            pixelsHigh:height
+                         bitsPerSample:8
+                       samplesPerPixel:4
+                              hasAlpha:YES
+                              isPlanar:NO
+                        colorSpaceName:NSCalibratedRGBColorSpace
+                           bytesPerRow:0
+                          bitsPerPixel:0];
+    bitmapImage.size = NSMakeSize(width, height);
+
+	[NSGraphicsContext saveGraphicsState];
+    [NSGraphicsContext setCurrentContext:[NSGraphicsContext graphicsContextWithBitmapImageRep:bitmapImage]];
+    [self drawInRect:NSMakeRect(0, 0, width, height) fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
+    [NSGraphicsContext restoreGraphicsState];
+
+//	NSImage *tempImage = [[NSImage alloc] initWithSize:NSMakeSize(width, height)];
+//	[tempImage lockFocus];
+//	[self drawInRect:NSMakeRect(0, 0, [tempImage size].width, [tempImage size].height) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
+//	[tempImage unlockFocus];
+//
+//	NSBitmapImageRep *bitmapImage = [[NSBitmapImageRep alloc] initWithData:[tempImage TIFFRepresentation]];
 	
-	for (int i = 0; i < [tempImage size].height; i++) {
-		for (int j = 0; j < [tempImage size].width; j++) {
+	for (NSInteger i = 0; i < height; i++) {
+		for (NSInteger j = 0; j < width; j++) {
 			NSColor *color = [bitmapImage colorAtX:j y:i];
 			NSColor *wColor = [color colorUsingColorSpaceName:NSDeviceWhiteColorSpace];
 			[string appendString:stringForBrightness([wColor whiteComponent])];
@@ -70,7 +87,7 @@ NSString *stringForBrightness(CGFloat brightness)
 		[string appendString:@"\n"];
 	}
 	[bitmapImage release];
-	[tempImage release];
+//	[tempImage release];
 	return string;
 }
 
