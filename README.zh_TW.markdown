@@ -2,7 +2,7 @@
 
 2009 © Weizhong Yang. All Right Reserved.
 
-![Screenshot](http://cloud.github.com/downloads/zonble/cocoaascii/screenshot.jpg)
+![Screenshot](screenshot.png)
 
 顧名思義，這是一套將各種圖片檔案，轉換成以英數字元構成的 ASCII Art 的小程式。
 
@@ -10,13 +10,12 @@
 
 ## 系統需求
 
-* Mac OS X 10.4 以上作業系統便可執行
-* 為 Universal Binary，可在 Intel 或 PowerPC 主機上使用
+* Mac OS X 10.9 以上作業系統便可執行
 * 檔案很小，大約佔用不到 1MB 的容量
 
 ## 自行編譯
 
-如果您想要自行編譯這個程式，您需要 Mac OS X 10.5 以上作業系統，並安裝 Xcode 3.0 以上版本。Xcode 開發工具可以在蘋果開發者（Apple Developer Connection）網站上取得。
+如果您想要自行編譯這個程式，您需要安裝 Xcode。
 
 編譯方式非常簡單：
 
@@ -25,4 +24,4 @@
 
 ## 意見反應
 
-如您有任何建議，歡迎來信至 zonble@lithoglyph.com
+如您有任何建議，歡迎來信至 zonble@gmail.com

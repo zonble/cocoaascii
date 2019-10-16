@@ -1,6 +1,6 @@
 # ASCII Converter
 
-![Screenshot](http://cloud.github.com/downloads/zonble/cocoaascii/screenshot.jpg)
+![Screenshot](screenshot.png)
 
 ASCII Converter is merely a simple tool which helps you to convert an image file into an ASCII artwork.
 
@@ -8,13 +8,12 @@ What you need to do is launch the application, darg your image file to the main 
 
 ## Requirements
 
-* Mac OS X 10.4 Tiger and higher versions.
-* Intel or Power PC Macintosh.
+* Mac OS X 10.9 and higher versions.
 * About 1Mb disk space.
 
 ## Build your own version
 
-If you want to build the application by your self, Mac OS X 10.5 Leopard and Xocde 3.0 or higher version are required. You can download Xcode IDE free from [Apple Developer Connection](http://developer.apple.com/). You will be asked to regiter an ADC account.
+If you want to build the application by your self, macOS and Xcode are required.
 
 It is quite easy to build the application:
 
@@ -24,4 +23,4 @@ It is quite easy to build the application:
 
 ## Feedback/Contact
 
-Any suggestion or advice is welcome. Please write to zonble@lithoglyph.com
+Any suggestion or advice is welcome. Please write to zonble@gmail.com
