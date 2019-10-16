@@ -62,8 +62,11 @@
 	NSInteger height = _heightField.integerValue;
 	NSImage *image = _imageView.image;
 	NSString *asciiArt = [image asciiArtWithWidth:width height:height];
-	_textView.textStorage.mutableString.string = asciiArt;
-	_textView.textStorage.font = [self _defaultFont];
+	NSAttributedString *s = [[NSAttributedString alloc] initWithString:asciiArt attributes:@{
+			NSForegroundColorAttributeName: [NSColor textColor],
+			NSFontAttributeName: [self _defaultFont]
+	}];
+	[_textView.textStorage setAttributedString:s];
 }
 
 - (IBAction)changeWidth:(id)sender
