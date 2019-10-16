@@ -5,11 +5,11 @@
 //  Created by zonble on 2009/07/23.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
 @class ASCIIImageView;
 
-@interface NSObject(ImageViewDelegate)
+@interface NSObject (ImageViewDelegate)
 - (void)imageViewImageDidChange:(ASCIIImageView *)imageView;
 - (void)imageViewImageDidDoubleClick:(ASCIIImageView *)imageView;
 @end

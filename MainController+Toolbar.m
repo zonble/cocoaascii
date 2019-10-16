@@ -11,48 +11,50 @@ static NSString *loadToolbarIdentifier = @"Load Image";
 static NSString *saveToolbarIdentifier = @"Save";
 static NSString *copyToolbarIdentifier = @"Copy";
 
-@implementation MainController(Toolbar)
+@implementation MainController (Toolbar)
 
 - (NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar *)toolbar
 {
-	return [NSArray arrayWithObjects:loadToolbarIdentifier, NSToolbarSeparatorItemIdentifier, saveToolbarIdentifier, copyToolbarIdentifier, NSToolbarSeparatorItemIdentifier, NSToolbarPrintItemIdentifier, NSToolbarFlexibleSpaceItemIdentifier, NSToolbarCustomizeToolbarItemIdentifier,nil];
+	return @[loadToolbarIdentifier, NSToolbarSeparatorItemIdentifier, saveToolbarIdentifier, copyToolbarIdentifier, NSToolbarSeparatorItemIdentifier, NSToolbarPrintItemIdentifier, NSToolbarFlexibleSpaceItemIdentifier, NSToolbarCustomizeToolbarItemIdentifier];
 }
 
 - (NSArray *)toolbarAllowedItemIdentifiers:(NSToolbar *)toolbar
 {
-	return [NSArray arrayWithObjects:loadToolbarIdentifier, saveToolbarIdentifier, copyToolbarIdentifier, NSToolbarSeparatorItemIdentifier, NSToolbarSpaceItemIdentifier, NSToolbarFlexibleSpaceItemIdentifier, NSToolbarCustomizeToolbarItemIdentifier, NSToolbarPrintItemIdentifier,nil];
+	return @[loadToolbarIdentifier, saveToolbarIdentifier, copyToolbarIdentifier, NSToolbarSeparatorItemIdentifier, NSToolbarSpaceItemIdentifier, NSToolbarFlexibleSpaceItemIdentifier, NSToolbarCustomizeToolbarItemIdentifier, NSToolbarPrintItemIdentifier];
 }
+
 - (NSToolbarItem *)toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag
 {
-	NSToolbarItem *item = [[[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier] autorelease];
+	NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:itemIdentifier];
 	if ([itemIdentifier isEqualToString:loadToolbarIdentifier]) {
-		[item setLabel:NSLocalizedString(loadToolbarIdentifier, @"")];
-		[item setImage:[NSImage imageNamed:@"insert_image"]];
-		[item setTarget:self];
-		[item setAction:@selector(loadImage:)];
+		item.label = NSLocalizedString(loadToolbarIdentifier, @"");
+		item.image = [NSImage imageNamed:@"insert_image"];
+		item.target = self;
+		item.action = @selector(loadImage:);
 	}
 	else if ([itemIdentifier isEqualToString:saveToolbarIdentifier]) {
-		[item setLabel:NSLocalizedString(saveToolbarIdentifier, @"")];
-		[item setImage:[NSImage imageNamed:@"save"]];
-		[item setTarget:self];
-		[item setAction:@selector(save:)];
+		item.label = NSLocalizedString(saveToolbarIdentifier, @"");
+		item.image = [NSImage imageNamed:@"save"];
+		item.target = self;
+		item.action = @selector(save:);
 	}
 	else if ([itemIdentifier isEqualToString:copyToolbarIdentifier]) {
-		[item setLabel:NSLocalizedString(copyToolbarIdentifier, @"")];
-		[item setImage:[NSImage imageNamed:@"copy"]];
-		[item setTarget:self];
-		[item setAction:@selector(copy:)];
+		item.label = NSLocalizedString(copyToolbarIdentifier, @"");
+		item.image = [NSImage imageNamed:@"copy"];
+		item.target = self;
+		item.action = @selector(copy:);
 	}
 	return item;
 }
+
 - (void)toolbarWillAddItem:(NSNotification *)notification
 {
 	NSLog(@"notification:%@", [[notification object] description]);
 	NSLog(@"notification:%@", [[notification userInfo] description]);
-	NSToolbarItem *item = [[notification userInfo] objectForKey:@"item"];
-	if (item && [[item itemIdentifier] isEqualToString:NSToolbarPrintItemIdentifier]) {
-		[item setTarget:_textView];
-		[item setAction:@selector(print:)];
+	NSToolbarItem *item = notification.userInfo[@"item"];
+	if (item && [item.itemIdentifier isEqualToString:NSToolbarPrintItemIdentifier]) {
+		item.target = _textView;
+		item.action = @selector(print:);
 	}
 }
 

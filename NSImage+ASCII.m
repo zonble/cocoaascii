@@ -7,9 +7,7 @@
 
 #import "NSImage+ASCII.h"
 
-
-NSString *stringForBrightness(CGFloat brightness)
-{
+NSString *stringForBrightness(CGFloat brightness) {
 	if (brightness < (19.0 / 255)) {
 		return @"&";
 	}
@@ -43,7 +41,7 @@ NSString *stringForBrightness(CGFloat brightness)
 	return @" ";
 }
 
-@implementation NSImage(ASCII)
+@implementation NSImage (ASCII)
 
 - (NSString *)asciiArtWithWidth:(NSInteger)width height:(NSInteger)height
 {
@@ -53,31 +51,23 @@ NSString *stringForBrightness(CGFloat brightness)
 
 	NSMutableString *string = [NSMutableString string];
 
-    NSBitmapImageRep *bitmapImage = [[NSBitmapImageRep alloc]
-              initWithBitmapDataPlanes:NULL
-                            pixelsWide:width
-                            pixelsHigh:height
-                         bitsPerSample:8
-                       samplesPerPixel:4
-                              hasAlpha:YES
-                              isPlanar:NO
-                        colorSpaceName:NSCalibratedRGBColorSpace
-                           bytesPerRow:0
-                          bitsPerPixel:0];
-    bitmapImage.size = NSMakeSize(width, height);
+	NSBitmapImageRep *bitmapImage = [[NSBitmapImageRep alloc]
+			initWithBitmapDataPlanes:NULL
+						  pixelsWide:width
+						  pixelsHigh:height
+					   bitsPerSample:8
+					 samplesPerPixel:4
+							hasAlpha:YES
+							isPlanar:NO
+					  colorSpaceName:NSCalibratedRGBColorSpace
+						 bytesPerRow:0
+						bitsPerPixel:0];
+	bitmapImage.size = NSMakeSize(width, height);
 
 	[NSGraphicsContext saveGraphicsState];
-    [NSGraphicsContext setCurrentContext:[NSGraphicsContext graphicsContextWithBitmapImageRep:bitmapImage]];
-    [self drawInRect:NSMakeRect(0, 0, width, height) fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
-    [NSGraphicsContext restoreGraphicsState];
-
-//	NSImage *tempImage = [[NSImage alloc] initWithSize:NSMakeSize(width, height)];
-//	[tempImage lockFocus];
-//	[self drawInRect:NSMakeRect(0, 0, [tempImage size].width, [tempImage size].height) fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:1.0];
-//	[tempImage unlockFocus];
-//
-//	NSBitmapImageRep *bitmapImage = [[NSBitmapImageRep alloc] initWithData:[tempImage TIFFRepresentation]];
-	
+	[NSGraphicsContext setCurrentContext:[NSGraphicsContext graphicsContextWithBitmapImageRep:bitmapImage]];
+	[self drawInRect:NSMakeRect(0, 0, width, height) fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
+	[NSGraphicsContext restoreGraphicsState];
 	for (NSInteger i = 0; i < height; i++) {
 		for (NSInteger j = 0; j < width; j++) {
 			NSColor *color = [bitmapImage colorAtX:j y:i];
@@ -86,8 +76,6 @@ NSString *stringForBrightness(CGFloat brightness)
 		}
 		[string appendString:@"\n"];
 	}
-	[bitmapImage release];
-//	[tempImage release];
 	return string;
 }
 

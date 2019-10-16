@@ -29,7 +29,7 @@
 	if ([event clickCount] > 1) {
 		if (delegate && [delegate respondsToSelector:@selector(imageViewImageDidDoubleClick:)]) {
 			[delegate imageViewImageDidDoubleClick:self];
-		}		
+		}
 	}
 }
 

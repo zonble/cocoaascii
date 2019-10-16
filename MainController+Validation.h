@@ -5,8 +5,8 @@
 //  Created by zonble on 2009/07/23.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 #import "MainController.h"
 
-@interface MainController(Validation)
+@interface MainController (Validation)
 @end

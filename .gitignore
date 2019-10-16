@@ -5,3 +5,4 @@ build
 *.perspectivev3
 *.pyc
 .DS_Store
+.idea

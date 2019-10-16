@@ -8,7 +8,7 @@
 #import "MainController+Validation.h"
 
 
-@implementation MainController(Validation)
+@implementation MainController (Validation)
 
 - (BOOL)validate:(SEL)action
 {
@@ -16,13 +16,15 @@
 		return YES;
 	}
 	else if (action == @selector(save:) || action == @selector(saveAs:)) {
-		if ([[[[_textView textStorage] string] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length])
+		if ([_textView.textStorage.string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length) {
 			return YES;
+		}
 	}
 	else if (action == @selector(copy:)) {
-		id responder = [[self window] firstResponder];
-		if ([responder respondsToSelector:@selector(copy:)])
-			return YES;		
+		id responder = self.window.firstResponder;
+		if ([responder respondsToSelector:@selector(copy:)]) {
+			return YES;
+		}
 	}
 	else if (action == @selector(openZonbleBlogURL:)) {
 		return YES;
@@ -32,13 +34,12 @@
 
 - (BOOL)validateMenuItem:(NSMenuItem *)menuItem
 {
-	SEL action = [menuItem action];
-	return [self validate:action];
+	return [self validate:menuItem.action];
 }
+
 - (BOOL)validateToolbarItem:(NSToolbarItem *)theItem
 {
-	SEL action = [theItem action];
-	return [self validate:action];
+	return [self validate:theItem.action];
 }
 
 @end
