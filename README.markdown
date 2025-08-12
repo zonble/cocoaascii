@@ -8,7 +8,7 @@ What you need to do is launch the application, darg your image file to the main 
 
 ## Requirements
 
-* Mac OS X 10.9 and higher versions.
+* macOS 10.15 (Catalina) and higher versions.
 * About 1Mb disk space.
 
 ## Build your own version

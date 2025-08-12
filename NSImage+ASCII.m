@@ -59,14 +59,14 @@ NSString *stringForBrightness(CGFloat brightness) {
 					 samplesPerPixel:4
 							hasAlpha:YES
 							isPlanar:NO
-					  colorSpaceName:NSCalibratedRGBColorSpace
+					  colorSpaceName:NSDeviceRGBColorSpace
 						 bytesPerRow:0
 						bitsPerPixel:0];
 	bitmapImage.size = NSMakeSize(width, height);
 
 	[NSGraphicsContext saveGraphicsState];
 	[NSGraphicsContext setCurrentContext:[NSGraphicsContext graphicsContextWithBitmapImageRep:bitmapImage]];
-	[self drawInRect:NSMakeRect(0, 0, width, height) fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
+	[self drawInRect:NSMakeRect(0, 0, width, height)];
 	[NSGraphicsContext restoreGraphicsState];
 	for (NSInteger i = 0; i < height; i++) {
 		for (NSInteger j = 0; j < width; j++) {
